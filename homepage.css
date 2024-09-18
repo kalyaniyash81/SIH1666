@@ -1,0 +1,76 @@
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: #004c99;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    height: 70vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.hero h1 {
+    font-size: 3em;
+}
+.hero .cta-buttons {
+    margin-top: 20px;
+}
+.cta-buttons button {
+    padding: 15px 30px;
+    margin: 0 10px;
+    border: none;
+    background-color: #ff9900;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+.cta-buttons button:hover {
+    background-color: #e68a00;
+}
+.introduction {
+    padding: 50px;
+    text-align: center;
+}
+.services {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+.service-card {
+    width: 200px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+    border-radius: 10px;
+}
+.service-card img {
+    width: 100px;
+    height: 100px;
+}
+.service-card h3 {
+    margin-top: 15px;
+    font-size: 1.2em;
+}

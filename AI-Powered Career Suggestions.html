@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AI-Powered Career Suggestions</title>
+    <link rel="stylesheet" href="AI-Powered Career Suggestions.css">
+</head>
+<body>
+
+    <div class="career-suggestions-section">
+        <h1>AI-Powered Career Suggestions</h1>
+        <p>Find your ideal career based on your interests and skills. Fill in the details below and let our AI suggest the best career paths for you!</p>
+        
+        <form class="career-form" action="/submit-career-suggestions" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="interests">Your Interests:</label>
+            <textarea id="interests" name="interests" placeholder="Describe your interests (e.g., technology, art, business, etc.)" required></textarea>
+
+            <label for="skills">Your Skills:</label>
+            <textarea id="skills" name="skills" placeholder="Describe your skills (e.g., programming, communication, problem-solving, etc.)" required></textarea>
+
+            <label for="education">Your Education Level:</label>
+            <select id="education" name="education" required>
+                <option value="high_school">High School</option>
+                <option value="undergraduate">Undergraduate</option>
+                <option value="postgraduate">Postgraduate</option>
+            </select>
+
+            <button type="submit">Get Career Suggestions</button>
+        </form>
+
+        <div class="suggestions-output">
+            <h2>Suggested Careers for You</h2>
+            <div id="career-suggestions">
+                <!-- AI suggestions will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

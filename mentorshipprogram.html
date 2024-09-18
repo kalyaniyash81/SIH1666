@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentorship Program</title>
+  <link rel="stylesheet" href="mentorshipprogram.css">
+</head>
+<body>
+  <header>
+    <h1>Find Your Mentor</h1>
+    <p>Browse available mentors and request mentorship sessions</p>
+  </header>
+
+  <section id="mentor-list">
+    <h2>Available Mentors</h2>
+    
+    <div class="mentor-row">
+      <div class="mentor-card" id="mentor1">
+        <h3>John Doe</h3>
+        <p><strong>Expertise:</strong> Web Development, JavaScript</p>
+        <p><strong>Bio:</strong> 5+ years of experience in full stack development</p>
+        <button onclick="requestMentorship('John Doe')">Request Mentorship</button>
+      </div>
+
+      <div class="mentor-card" id="mentor2">
+        <h3>Jane Smith</h3>
+        <p><strong>Expertise:</strong> Data Science, Machine Learning</p>
+        <p><strong>Bio:</strong> Data scientist working with AI and ML technologies</p>
+        <button onclick="requestMentorship('Jane Smith')">Request Mentorship</button>
+      </div>
+
+      <div class="mentor-card" id="mentor3">
+        <h3>Michael Lee</h3>
+        <p><strong>Expertise:</strong> Cybersecurity, Networking</p>
+        <p><strong>Bio:</strong> Security analyst with expertise in network security</p>
+        <button onclick="requestMentorship('Michael Lee')">Request Mentorship</button>
+      </div>
+
+      <div class="mentor-card" id="mentor4">
+        <h3>Lisa Brown</h3>
+        <p><strong>Expertise:</strong> UX/UI Design, Product Design</p>
+        <p><strong>Bio:</strong> 6+ years of experience in design and user experience</p>
+        <button onclick="requestMentorship('Lisa Brown')">Request Mentorship</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="request-popup" class="hidden">
+    <h3>Request Mentorship</h3>
+    <p id="mentor-name"></p>
+    <label for="student-name">Your Name:</label>
+    <input type="text" id="student-name" required>
+    <label for="message">Message:</label>
+    <textarea id="message" rows="4" placeholder="Tell the mentor why you need guidance"></textarea>
+    <button onclick="submitRequest()">Submit Request</button>
+    <button onclick="closePopup()">Cancel</button>
+  </div>
+
+  <div id="request-status" class="hidden">
+    <h3>Mentorship Request Sent!</h3>
+    <p>Your request has been submitted. The mentor will reach out to you soon.</p>
+    <button onclick="closeStatus()">Close</button>
+  </div>
+
+  <script src="mentorship.js"></script>
+</body>
+</html>

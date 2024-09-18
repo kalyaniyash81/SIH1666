@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="carrerassesment.css">
+    <title>Interactive Career Test</title>
+   
+</head>
+<body>
+
+<div class="career-test-container">
+    <h1>Career Assessment Test</h1>
+
+    <!-- Question 1 -->
+    <div class="question">
+        <p>1. What subjects do you enjoy the most?</p>
+        <div class="options">
+            <label><input type="radio" name="q1" value="tech"> Math and Science</label>
+            <label><input type="radio" name="q1" value="healthcare"> Biology and Health Studies</label>
+            <label><input type="radio" name="q1" value="finance"> Economics and Accounting</label>
+            <label><input type="radio" name="q1" value="arts"> Arts and Literature</label>
+            <label><input type="radio" name="q1" value="engineering"> Engineering and Technology</label>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question">
+        <p>2. How do you like to spend your free time?</p>
+        <div class="options">
+            <label><input type="radio" name="q2" value="tech"> Solving puzzles or building things</label>
+            <label><input type="radio" name="q2" value="healthcare"> Volunteering and helping others</label>
+            <label><input type="radio" name="q2" value="finance"> Reading financial news and analyzing markets</label>
+            <label><input type="radio" name="q2" value="arts"> Drawing, writing, or being creative</label>
+            <label><input type="radio" name="q2" value="sports"> Playing sports and staying active</label>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question">
+        <p>3. What is most important to you in a career?</p>
+        <div class="options">
+            <label><input type="radio" name="q3" value="tech"> Innovation and problem-solving</label>
+            <label><input type="radio" name="q3" value="healthcare"> Helping others and improving lives</label>
+            <label><input type="radio" name="q3" value="finance"> Stability and financial growth</label>
+            <label><input type="radio" name="q3" value="arts"> Creativity and self-expression</label>
+            <label><input type="radio" name="q3" value="engineering"> Designing and building new things</label>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="question">
+        <p>4. What type of work environment would you prefer?</p>
+        <div class="options">
+            <label><input type="radio" name="q4" value="tech"> In an office working with computers</label>
+            <label><input type="radio" name="q4" value="healthcare"> In a hospital or healthcare facility</label>
+            <label><input type="radio" name="q4" value="finance"> In a corporate setting or financial institution</label>
+            <label><input type="radio" name="q4" value="arts"> In a studio or creative workspace</label>
+            <label><input type="radio" name="q4" value="engineering"> On-site working with technical equipment</label>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="question">
+        <p>5. How do you feel about working under pressure?</p>
+        <div class="options">
+            <label><input type="radio" name="q5" value="tech"> I thrive under tight deadlines</label>
+            <label><input type="radio" name="q5" value="healthcare"> I stay calm and composed in stressful situations</label>
+            <label><input type="radio" name="q5" value="finance"> I analyze the situation to make the best decision</label>
+            <label><input type="radio" name="q5" value="arts"> I prefer a flexible, creative workflow</label>
+            <label><input type="radio" name="q5" value="sports"> I am energized by competition and challenges</label>
+        </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button onclick="calculateCareer()">Get Career Suggestion</button>
+
+    <!-- Result Display -->
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+    function calculateCareer() {
+        // Get the values of each question
+        const q1 = document.querySelector('input[name="q1"]:checked')?.value;
+        const q2 = document.querySelector('input[name="q2"]:checked')?.value;
+        const q3 = document.querySelector('input[name="q3"]:checked')?.value;
+        const q4 = document.querySelector('input[name="q4"]:checked')?.value;
+        const q5 = document.querySelector('input[name="q5"]:checked')?.value;
+
+        // Count the number of responses for each career
+        let scores = {
+            tech: 0,
+            healthcare: 0,
+            finance: 0,
+            arts: 0,
+            engineering: 0,
+            sports: 0
+        };
+
+        if (q1) scores[q1]++;
+        if (q2) scores[q2]++;
+        if (q3) scores[q3]++;
+        if (q4) scores[q4]++;
+        if (q5) scores[q5]++;
+
+        // Determine the career with the highest score
+        let suggestedCareer = Object.keys(scores).reduce((a, b) => scores[a] > scores[b] ? a : b);
+
+        // Display the result
+        let careerMap = {
+            tech: "Technology (Software Development, Data Science, etc.)",
+            healthcare: "Healthcare (Nursing, Medicine, etc.)",
+            finance: "Finance (Accounting, Financial Analysis, etc.)",
+            arts: "Arts (Design, Literature, etc.)",
+            engineering: "Engineering (Mechanical, Civil, etc.)",
+            sports: "Sports (Athletics, Coaching, etc.)"
+        };
+
+        document.getElementById('result').innerHTML = `Based on your answers, a career in <strong>${careerMap[suggestedCareer]}</strong> would be a great fit for you!`;
+    }
+</script>
+
+</body>
+</html>

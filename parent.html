@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Parental Access and Involvement</title>
+    <link rel="stylesheet" href="parent.css">
+</head>
+<body>
+
+    <div class="parental-access-container">
+        <h1>Parental Access and Involvement</h1>
+        <p>Parents can sign up to monitor their child's career progress and provide valuable feedback to help guide their educational journey.</p>
+
+        <div class="access-form-container">
+            <div class="signup-section">
+                <h2>Parent Sign Up</h2>
+                <form class="signup-form" action="/submit-signup" method="POST">
+                    <label for="parent-name">Parent's Name:</label>
+                    <input type="text" id="parent-name" name="parent-name" placeholder="Your Name" required>
+
+                    <label for="child-name">Child's Name:</label>
+                    <input type="text" id="child-name" name="child-name" placeholder="Your Child's Name" required>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Create Password" required>
+
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+
+            <div class="login-section">
+                <h2>Parent Login</h2>
+                <form class="login-form" action="/submit-login" method="POST">
+                    <label for="email-login">Email Address:</label>
+                    <input type="email" id="email-login" name="email-login" placeholder="Your Email" required>
+
+                    <label for="password-login">Password:</label>
+                    <input type="password" id="password-login" name="password-login" placeholder="Your Password" required>
+
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="progress-monitoring">
+            <h2>Monitor Your Child's Progress</h2>
+            <p>As a parent, you can track your child's career progress and provide feedback on their activities.</p>
+            <ul>
+                <li>View career assessment results</li>
+                <li>Check progress on career roadmaps</li>
+                <li>Provide feedback on selected career paths</li>
+                <li>Stay updated with regular reports</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

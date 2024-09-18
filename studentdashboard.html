@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="studentdashboard.css">
+</head>
+<body>
+
+<!-- Dashboard Structure -->
+<div class="dashboard">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Student Dashboard</h2>
+        <a href="#profile" class="active">Profile</a>
+        <a href="#progress">Career Progress</a>
+        <a href="carrerassesmenttest.html">Assessments</a>
+        <a href="#meetings">Counselor Meetings</a>
+        <a href="#resources">Resources</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <h1>Welcome, [Student Name]</h1>
+            <button class="logout">Logout</button>
+        </div>
+
+        <!-- Welcome Section -->
+        <div class="dashboard-welcome">
+            <h2>Good to see you back, [Student Name]!</h2>
+            <p>Take a look at your current progress and explore new resources to help you make informed career decisions.</p>
+        </div>
+
+        <!-- Cards Section -->
+        <div class="dashboard-cards">
+            <!-- Profile Card -->
+            <div class="card">
+                <h3>View Profile</h3>
+                <p>Update your personal information and review your interests and strengths.</p>
+                <button onclick="alert('View Profile')">View Profile</button>
+            </div>
+
+            <!-- Career Progress Card -->
+            <div class="card">
+                <h3>Career Progress</h3>
+                <p>Track your career exploration and assessment results.</p>
+                <button onclick="alert('View Career Progress')">Track Progress</button>
+            </div>
+
+            <!-- Assessments Card -->
+            <div class="card">
+                <h3>Take Assessments</h3>
+                <p>Complete your pending career assessments to discover suitable career paths.</p>
+                <button onclick="alert('Start Assessment')">Start Assessment</button>
+            </div>
+
+            <!-- Counselor Meetings Card -->
+            <div class="card">
+                <h3>Schedule a Meeting</h3>
+                <p>Book a one-on-one session with a career counselor to discuss your goals.</p>
+                <button onclick="alert('Schedule a Meeting')">Schedule Now</button>
+            </div>
+
+            <!-- Resources Card -->
+            <div class="card">
+                <h3>Explore Resources</h3>
+                <p>Access a library of resources to learn more about careers, skills, and opportunities.</p>
+                <button onclick="alert('Explore Resources')">Explore Resources</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

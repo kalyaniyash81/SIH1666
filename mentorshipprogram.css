@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  #mentor-list {
+    padding: 20px;
+  }
+  
+  .mentor-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .mentor-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #mentor1 {
+    background-color: #f1c40f;
+  }
+  
+  #mentor2 {
+    background-color: #e74c3c;
+  }
+  
+  #mentor3 {
+    background-color: #3498db;
+  }
+  
+  #mentor4 {
+    background-color: #2ecc71;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  #request-popup, #request-status {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    width: 300px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  textarea {
+    width: 100%;
+    margin-top: 5px;
+  }
+  
+  input, textarea {
+    
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    width: 100%;
+  }
+  

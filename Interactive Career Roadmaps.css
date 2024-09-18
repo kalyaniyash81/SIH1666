@@ -1,0 +1,115 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.roadmap-container {
+    width: 70%;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+p {
+    font-size: 18px;
+    color: #7f8c8d;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.career-roadmap {
+    position: relative;
+    margin: 50px 0;
+}
+
+.roadmap-step {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.roadmap-step:nth-child(odd) .roadmap-content {
+    order: 1;
+}
+
+.roadmap-step:nth-child(even) .roadmap-content {
+    order: 2;
+    justify-content: flex-end;
+}
+
+.roadmap-content {
+    width: 45%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.roadmap-content h2 {
+    font-size: 20px;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.roadmap-content p {
+    font-size: 16px;
+    color: #7f8c8d;
+}
+
+.roadmap-dot {
+    width: 20px;
+    height: 20px;
+    background-color: #3498db;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.roadmap-step::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background-color: #3498db;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.roadmap-step:last-child::before {
+    height: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .career-roadmap {
+        flex-direction: column;
+    }
+
+    .roadmap-step {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .roadmap-content {
+        width: 80%;
+    }
+
+    .roadmap-dot {
+        left: 50%;
+    }
+}

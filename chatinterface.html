@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Counselor Chat</title>
+  <link rel="stylesheet" href="chatinterface.css">
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">
+      <h2>John & Counselor Smith</h2>
+    </div>
+    
+    <div class="chat-box" id="chat-box">
+      <!-- Demo chat messages -->
+      <div class="message student">
+        <div class="bubble student-bubble">
+          <p>Hello, I need some career guidance.</p>
+        </div>
+      </div>
+      <div class="message counselor">
+        <div class="bubble counselor-bubble">
+          <p>Sure, how can I assist you?</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="chat-input">
+      <input type="text" id="message" placeholder="Type a message..." autocomplete="off">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
